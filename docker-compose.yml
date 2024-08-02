@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+    db:
+        image: "mcr.microsoft.com/mssql/server:2022-latest"
+        environment:
+          - ACCEPT_EULA=Y
+          - SA_PASSWORD=Holamundo123.
+        ports:
+          - 1433:1433
+
+    backendbookingtravel.api:
+        image: ${DOCKER_REGISTRY-}backendbookingtravelapi
+        build:
+          context: .
+          dockerfile: BackEndBookingTravel.Api/Dockerfile
