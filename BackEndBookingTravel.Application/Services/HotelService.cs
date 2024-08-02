@@ -69,6 +69,7 @@ namespace BackEndBookingTravel.Application.Services
             }
             catch (Exception ex)
             {
+                _logger.Error($"Add Room Error: {ex.Message}");
                 throw ex;
             }
 
@@ -86,6 +87,7 @@ namespace BackEndBookingTravel.Application.Services
             }
             catch (Exception ex)
             {
+                _logger.Error($"Change Status Hotel Error: {ex.Message}");
                 throw ex;
             }
 
@@ -107,6 +109,7 @@ namespace BackEndBookingTravel.Application.Services
             }
             catch (Exception ex)
             {
+                _logger.Error($"Update Hotel Error: {ex.Message}");
                 throw ex;
             }
 

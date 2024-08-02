@@ -18,5 +18,7 @@ namespace BackEndBookingTravel.Application.Interfaces
         Task ChangeStatusRoomAsync(int idRoom);
 
         Task<ApiResponse<List<RoomResponseDto>>> GetAllRoomsAsync();
+
+        Task<ApiResponse<string>> UpdateRoomAsync(RoomDto roomDto);
     }
 }

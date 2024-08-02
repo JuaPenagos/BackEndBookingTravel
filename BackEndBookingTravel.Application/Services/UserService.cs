@@ -17,14 +17,12 @@ namespace BackEndBookingTravel.Application.Services
     public class UserService : IUserService
     {
         private readonly IUserRepository _userRepository;
-        private readonly ILog _logger;
         private readonly IUtilityJWT _utilityJWT;
         private readonly Encrypt _encrypt;
 
-        public UserService(IUserRepository userRepository, ILog logger, IUtilityJWT utilityJWT)
+        public UserService(IUserRepository userRepository, IUtilityJWT utilityJWT)
         {
             _userRepository = userRepository;
-            _logger = logger;
             _utilityJWT = utilityJWT;
             _encrypt = new Encrypt(); 
 

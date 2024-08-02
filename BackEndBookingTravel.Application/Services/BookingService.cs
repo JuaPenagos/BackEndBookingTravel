@@ -16,16 +16,14 @@ namespace BackEndBookingTravel.Application.Services
     public class BookingService : IBookingService
     {
         private readonly IBookingRepository _bookingRepository;
-        private readonly ILog _logger;
         private readonly IBookingCustomerRepository _bookingCustomerRepository;
         private readonly ICustomerRepository _customerRepository;
         private readonly IHotelRoomRepository _hotelRoomRepository;
         private readonly IEmailSender _emailSender;
-        public BookingService(IBookingRepository bookingRepository, ILog logger, IBookingCustomerRepository bookingCustomerRepository,
+        public BookingService(IBookingRepository bookingRepository, IBookingCustomerRepository bookingCustomerRepository,
             ICustomerRepository customerRepository , IHotelRoomRepository hotelRoomRepository, IEmailSender emailSender)
         {
             _bookingRepository = bookingRepository;
-            _logger = logger;
             _bookingCustomerRepository = bookingCustomerRepository;
             _customerRepository = customerRepository;
             _hotelRoomRepository = hotelRoomRepository;

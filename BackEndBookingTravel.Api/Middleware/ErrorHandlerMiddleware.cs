@@ -29,6 +29,7 @@ namespace BackEndBookingTravel.Api.Middleware
                 await context.Response.WriteAsJsonAsync(new ApiResponse<object> { Success = false, Message = ex.Message });
             }
             catch (Exception ex)
+            { 
                 context.Response.StatusCode = StatusCodes.Status500InternalServerError;
                 await context.Response.WriteAsJsonAsync(new ApiResponse<object> { Success = false, Message = "An error occurred while processing your request." });
             }

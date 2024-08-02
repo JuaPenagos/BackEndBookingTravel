@@ -22,7 +22,6 @@ namespace BackendBookingTravel.Test.Services
         private Mock<IHotelRoomRepository> _mockHotelRoomRepository;
         private Mock<ICustomerRepository> _mockCustomerRepository;
         private Mock<IEmailSender> _mockEmailSenderRepository;
-        private Mock<ILog> _mockLogger;
         
 
         public BookingServiceTest()
@@ -32,8 +31,7 @@ namespace BackendBookingTravel.Test.Services
             _mockHotelRoomRepository = new Mock<IHotelRoomRepository>();
             _mockCustomerRepository = new Mock<ICustomerRepository>();
             _mockEmailSenderRepository = new Mock<IEmailSender>();
-            _mockLogger = new Mock<ILog>();
-            _bookingService = new BookingService(_mockBookingRepository.Object, _mockLogger.Object, _mockBookingCustomerRepository.Object, _mockCustomerRepository.Object, 
+            _bookingService = new BookingService(_mockBookingRepository.Object, _mockBookingCustomerRepository.Object, _mockCustomerRepository.Object, 
                 _mockHotelRoomRepository.Object, _mockEmailSenderRepository.Object);
         }
 

@@ -106,7 +106,7 @@ namespace BackEndBookingTravel.Application.Services
             }
         }
 
-        public async Task<ApiResponse<string>> UpdateHotelAsync(RoomDto roomDto)
+        public async Task<ApiResponse<string>> UpdateRoomAsync(RoomDto roomDto)
         {
             Room room = new Room()
             {
@@ -125,6 +125,7 @@ namespace BackEndBookingTravel.Application.Services
             }
             catch (Exception ex)
             {
+                _logger.Error($"Update Room Error: {ex.Message}");
                 throw ex;
             }
 

@@ -16,10 +16,8 @@ namespace BackEndBookingTravel.Application.Services
     public class DocumentTypeService : IDocumentTypeService
     {
         private readonly IDocumentTypeRepository _documentTypeRepository;
-        private readonly ILog _logger;
-        public DocumentTypeService(IDocumentTypeRepository documentTypeRepository, ILog logger) {
+        public DocumentTypeService(IDocumentTypeRepository documentTypeRepository) {
         _documentTypeRepository = documentTypeRepository;
-        _logger = logger;
         }
 
         public async Task<List<DocumentType>> GetAllDocumentTypesAsync()

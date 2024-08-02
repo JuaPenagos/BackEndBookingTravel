@@ -13,11 +13,9 @@ namespace BackEndBookingTravel.Application.Services
     public class RoomTypeService : IRoomTypeService
     {
         private readonly IRoomTypeRepository _roomTypeRepository;
-        private readonly ILog _logger;
-        public RoomTypeService(IRoomTypeRepository roomTypeRepository, ILog logger)
+        public RoomTypeService(IRoomTypeRepository roomTypeRepository)
         {
             _roomTypeRepository = roomTypeRepository;
-            _logger = logger;
         }
 
         public async Task<List<RoomType>> GetAllRoomTypesAsync()
